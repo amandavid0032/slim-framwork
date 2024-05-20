@@ -711,7 +711,7 @@ class Uri implements UriInterface
      *
      * @return string The percent-encoded query string.
      */
-    protected function filterQuery($query)
+ protected function filterQuery($query)
     {
         return preg_replace_callback(
             '/(?:[^a-zA-Z0-9_\-\.~!\$&\'\(\)\*\+,;=%:@\/\?]+|%(?![A-Fa-f0-9]{2}))/',
@@ -721,7 +721,6 @@ class Uri implements UriInterface
             $query ?? ''
         );
     }
-
 
     /**
      * Retrieve the fragment component of the URI.
