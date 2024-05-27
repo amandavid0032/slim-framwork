@@ -59,8 +59,8 @@
                     gender: $('#gender').val()
                 },
                 success: function (data) {
-                    alert('Data added successfully');
                     window.location.href = '/';
+                     alert('Data added successfully');
                 },
                 error: function (xhr, status, error) {
                     console.error("Failed to add data:", xhr.responseText);

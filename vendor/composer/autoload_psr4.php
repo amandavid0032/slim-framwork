@@ -6,8 +6,15 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'StellaMaris\\Clock\\' => array($vendorDir . '/stella-maris/clock/src'),
+    'Slim\\Views\\' => array($vendorDir . '/slim/php-view/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
+    'Psr\\Clock\\' => array($vendorDir . '/psr/clock/src'),
+    'Lcobucci\\JWT\\' => array($vendorDir . '/lcobucci/jwt/src'),
+    'Lcobucci\\Clock\\' => array($vendorDir . '/lcobucci/clock/src'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
+    'App\\' => array($baseDir . '/app'),
 );

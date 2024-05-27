@@ -13,20 +13,41 @@ class ComposerStaticInit3b0766dbcef4dfb1a4a2012fef8611d8
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'StellaMaris\\Clock\\' => 18,
+            'Slim\\Views\\' => 11,
             'Slim\\' => 5,
         ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Psr\\Clock\\' => 10,
+        ),
+        'L' => 
+        array (
+            'Lcobucci\\JWT\\' => 13,
+            'Lcobucci\\Clock\\' => 15,
         ),
         'F' => 
         array (
+            'Firebase\\JWT\\' => 13,
             'FastRoute\\' => 10,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'StellaMaris\\Clock\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stella-maris/clock/src',
+        ),
+        'Slim\\Views\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/php-view/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
@@ -39,9 +60,29 @@ class ComposerStaticInit3b0766dbcef4dfb1a4a2012fef8611d8
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
+        'Psr\\Clock\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'Lcobucci\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/jwt/src',
+        ),
+        'Lcobucci\\Clock\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lcobucci/clock/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
