@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../public/script/script.js"></script>
+
+<body>
+    <a class="btn btn-success" href="/">index</a>
+    <form  id="form" method="post">
+        <label for="id">First Name:</label>
+        <input type="text" id="f_name" name="f_name"><br><br>
+
+        <label for="name">Last Name:</label>
+        <input type="text" id="l_name" name="l_name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Phone-No:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <label for="Age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html><script>
+    $(document).ready(function () {
+          var formData = $('#form').serialize();
+        $('form').submit(function (e) {
+            e.preventDefault(); // Prevent default form submission
+
+           $.ajax({
+                url: 'http://localhost:8888/api/post',
+                type: 'POST',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                data: {
+                    f_name: $('#f_name').val(),
+                    l_name: $('#l_name').val(),
+                    age: $('#age').val(),
+                    emailId: $('#email').val(),
+                    phone: $('#phone').val(),
+                    gender: $('#gender').val()
+                },
+                success: function (data) {
+                    window.location.href = '/';
+                     alert('Data added successfully');
+                },
+                error: function (xhr, status, error) {
+                    console.error("Failed to add data:", xhr.responseText);
+                }
+            });
+
+        });
+    });
+</script>
